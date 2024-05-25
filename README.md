@@ -7,6 +7,6 @@ Sistema de Autenticaci√≥n utilizando Laravel, permite manejar el inicio de sesi√
 
 3. **Configurar el archivo .env:** Copia el archivo .env.example a .env y configura los detalles de la base de datos y otras configuraciones necesarias.
 
-4. **Migrar la base de datos:** *php artisan migrate*
+4. **Migrar las tablas a la base de datos:** *php artisan migrate*
 
 5. **Iniciar el servidor:** *php artisan serve*
