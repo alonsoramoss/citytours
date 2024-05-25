@@ -1,12 +1,18 @@
 # Sistema de Autenticación
 Sistema de Autenticación utilizando Laravel, permite manejar el inicio de sesión y el registro de usuario, gestionando la autenticación en MySQL.
 
-1. **Clonar el repositorio**
+### Pasos para utilizar la aplicación web
 
-2. **Instalar dependencias:** *composer install*
+1. Clonar el repositorio
 
-3. **Configurar el archivo .env:** Copia el archivo .env.example a .env y configura los detalles de la base de datos y otras configuraciones necesarias.
+2. Instalar dependencias:
+-     composer install
 
-4. **Migrar las tablas a la base de datos:** *php artisan migrate*
+3. Configurar el archivo .env:
+- Copia el archivo .env.example a .env y configura los detalles de la base de datos y otras configuraciones necesarias.
 
-5. **Iniciar el servidor:** *php artisan serve*
+4. Migrar las tablas a la base de datos:
+-     php artisan migrate
+
+5. Iniciar el servidor:
+-     php artisan serve
