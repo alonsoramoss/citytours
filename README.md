@@ -1,5 +1,5 @@
-# Sistema de Gestión Turística
-Sistema de Autenticación utilizando Laravel, permite manejar el inicio de sesión, el registro de usuario y la venta de paquetes turísticos.
+# City Tours
+Sistema de gestión turística utilizando Laravel, permite manejar el inicio de sesión, el registro de usuario y la venta de paquetes turísticos.
 
 ### Pasos para utilizar la aplicación web
 
