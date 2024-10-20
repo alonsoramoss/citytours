@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Register</title>
+        <title>Crear tu Cuenta</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link
@@ -28,8 +28,8 @@
                         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
                         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
                         <div class="card bg-glass mt-5">
-                            <div class="card-body px-4 py-5 px-md-5">
-                                <h4 class="text-center display-4">REGISTER</h4>
+                            <div class="card-body">
+                                <h4 class="text-center display-4">REGISTRARSE</h4>
                                 <form action="{{route('register')}}" method="post">
                                     @csrf
                                     <div class="form-outline mb-4">
@@ -49,10 +49,10 @@
                                         <input type="password" name="password_confirmation" id="form3Example4" class="form-control" placeholder="Confirmar contraseña"/>
                                     </div>
                                     
-                                    <div class= "text-center pt-1 mb-5 pb-1">
-                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Registrarse</button>
+                                    <div class= "text-center pt-1 mb-5">
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2" type="submit">Registrarse</button>
                                     </div>
-                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <div class="d-flex align-items-center justify-content-center">
                                         <p class="mb-0 me-2">Ir a</p>
                                         <a href="{{route('login')}}">Login</a>
                                     </div>
