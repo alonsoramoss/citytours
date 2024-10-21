@@ -1,5 +1,5 @@
 # City Tours
-Sistema de gestión turística utilizando Laravel, permite manejar el inicio de sesión, el registro de usuario y la venta de paquetes turísticos.
+Sistema de gestión turística con Laravel, permite el registro de usuarios, inicio de sesión y la venta de paquetes turísticos.
 
 ### Pasos para utilizar la aplicación web
 
