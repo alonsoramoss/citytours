@@ -26,11 +26,11 @@
             </div>
         </div>
     </nav>
-    <div class="container my-5">
-        <h1 class="text-center mb-4 display-5 fw-semibold">Explora los destinos más populares del Perú</h1>
+    <div class="container">
+        <h1 class="text-center my-4 display-5 fw-semibold">Explora los destinos más populares del Perú</h1>
         
         <div class="row mb-4">
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/machupicchu.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Machu Picchu">
                     <div class="card-body">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/paracas.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Paracas">
                     <div class="card-body">
@@ -72,7 +72,7 @@
         </div>
         
         <div class="row mb-4">
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/iquitos.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Iquitos">
                     <div class="card-body">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/lagotiticaca.webp')}}" class="img-thumbnail" style="height: 6.7cm" alt="Lago Titicaca">
                     <div class="card-body">
@@ -114,7 +114,7 @@
         </div>
         
         <div class="row mb-4">
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/cusco.jpg')}}" class="img-thumbnail" style="height: 6.8cm" alt="Cusco">
                     <div class="card-body">
@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-4 pb-md-0">
                 <div class="card">
                     <img src="{{ asset('assets/trujillo.jpg')}}" class="img-thumbnail" style="height: 6.8cm" alt="Trujillo">
                     <div class="card-body">
