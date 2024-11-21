@@ -3,16 +3,30 @@ Sistema de gestión turística con Laravel, permite el registro de usuarios, ini
 
 ### Pasos para utilizar la aplicación web
 
-1. Clonar el repositorio
+#### 1. Clonar el repositorio
+    git clone https://github.com/alonsoramoss/citytours.git
 
-2. Instalar dependencias:
-   - *composer install*
+#### 2. Instalar dependencias
+    composer install
 
-3. Configurar el archivo .env:
-   - Copia el archivo .env.example a .env y configura los detalles de la base de datos y otras configuraciones necesarias.
+#### 3. Configurar el archivo .env
+Copia el archivo .env.example a .env:
 
-4. Migrar las tablas a la base de datos:
-    - *php artisan migrate*
+    cp .env.example .env
 
-5. Iniciar el servidor:
-    - *php artisan serve*
+Luego, abre el archivo `.env` y configura los siguientes detalles:
+- **Base de datos**: Configura `DB_DATABASE`, `DB_USERNAME` y `DB_PASSWORD` según tu entorno.
+
+#### 4. Generar la clave de aplicación
+Genera una nueva clave y colócala en `APP_KEY`:
+    
+    php artisan key:generate
+
+#### 5. Migrar las tablas a la base de datos
+Ejecuta las migraciones para crear las tablas necesarias en la base de datos:
+
+    php artisan migrate
+
+#### 6. Iniciar el servidor
+
+    php artisan serve
