@@ -14,15 +14,25 @@ Copia el archivo .env.example a .env:
 
     cp .env.example .env
 
-Luego, abre el archivo `.env` y configura los siguientes detalles:
-- **Base de datos**: Configura `DB_DATABASE`, `DB_USERNAME` y `DB_PASSWORD` según tu entorno.
+#### 4. Iniciar Apache y MySQL en XAMPP
+Abre el panel de control de XAMPP y activa los servicios de **Apache** y **MySQL**.
 
-#### 4. Generar la clave de aplicación
+#### 5. Configura el archivo `.env` con los datos de conexión a MySQL
+```sql
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=citytours
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
+
+#### 6. Generar la clave de aplicación
 Genera una nueva clave y colócala en `APP_KEY`:
     
     php artisan key:generate
 
-#### 5. Migrar las tablas a la base de datos
+#### 7. Migrar las tablas a la base de datos
 Ejecuta las migraciones para crear las tablas necesarias en la base de datos:
 
     php artisan migrate
