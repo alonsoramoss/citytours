@@ -1,5 +1,5 @@
 # City Tours
-Sistema de gestión turística con Laravel, permite el registro de usuarios, inicio de sesión y la venta de paquetes turísticos.
+Sistema de gestión turística que permite el registro de usuarios, inicio de sesión y la venta de paquetes turísticos.
 
 ![citytours_github](https://github.com/user-attachments/assets/4c9be2f2-64f0-435b-b559-0ce3b5c9df2a)
 
