@@ -1,7 +1,9 @@
 # City Tours
 Sistema de gestión turística con Laravel, permite el registro de usuarios, inicio de sesión y la venta de paquetes turísticos.
 
-### Pasos para utilizar la aplicación web
+![citytours_github](https://github.com/user-attachments/assets/4c9be2f2-64f0-435b-b559-0ce3b5c9df2a)
+
+## Instalación y Configuración
 
 #### 1. Clona el repositorio
     git clone https://github.com/alonsoramoss/citytours.git
