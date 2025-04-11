@@ -34,7 +34,7 @@
                         @error('password') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                     <div class="d-grid d-md-flex justify-content-md-end mt-3">
-                        <button type="submit" class="px-5 fw-semibold btn btn-success">Crear</button>
+                        <button type="submit" class="px-4 fw-semibold btn btn-success">Crear</button>
                     </div>                            
                 </form>
             </div>
