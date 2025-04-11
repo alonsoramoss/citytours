@@ -36,9 +36,10 @@ body, html {
     background-position: center;
 }
 
-.container .bg-glass {
-    padding: 20px; 
-    border-radius: 15px; 
+@media (max-width: 768px) {
+    .container {
+        background-image: none;
+    }
 }
 
 #radius-shape-1,
@@ -72,6 +73,8 @@ body, html {
 .bg-glass {
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
+    padding: 10px;
+    border-radius: 15px; 
 }
 
 @media (max-width: 768px) {
@@ -92,16 +95,4 @@ body, html {
         margin: 0 auto; 
         width: 90%; 
     }
-
-@media (max-width: 768px) {
-    .card-body h4 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .card-body h4 {
-        font-size: 2rem;
-    }
-}
 }
