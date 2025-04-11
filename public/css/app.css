@@ -1,0 +1,13 @@
+* {
+    font-family: 'Nunito', system-ui;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #0b16b8
+}
+
+*::-moz-selection {
+color: #fff;
+background-color: #0b16b8
+}
