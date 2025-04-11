@@ -32,7 +32,7 @@ class UserController extends Controller
             'password' => $request->password,
         ]);
         
-        return redirect('users/create')->with('status','Usuario Creado');
+        return redirect('users')->with('status','Usuario creado');
     }
     
     public function edit(int $id)
@@ -56,7 +56,7 @@ class UserController extends Controller
             'password' => $request->password,
         ]);
         
-        return redirect()->back()->with('status','Usuario Actualizado');
+        return redirect('users')->with('status','Usuario actualizado');
     }
     
     public function destroy(int $id)
@@ -64,11 +64,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         
-        return redirect()->back()->with('status','Usuario Eliminado');
+        return redirect('users')->with('status','Usuario eliminado');
     }
 }
-
-
-
-
-
