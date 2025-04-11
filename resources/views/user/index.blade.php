@@ -29,13 +29,13 @@
                         </thead>
                         <tbody>
                             @foreach ($users as $item)
-                            <tr>
-                                <td>{{$item->id}}</td>
+                            <tr class="align-middle">
+                                <td class="text-center">{{$item->id}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->email}}</td>
                                 <td>{{$item->password}}</td>
                                 <td>
-                                    <div class="d-flex text-center justify-content-center">
+                                    <div class="d-flex justify-content-center">
                                         <a href=" {{ url('users/'.$item->id.'/edit')}}" class="btn btn-warning m-1 px-4">Editar</a>
                                         
                                         <form action="{{ url('users/'.$item->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar el usuario?')">
