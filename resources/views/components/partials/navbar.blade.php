@@ -1,30 +1,29 @@
-<nav class="navbar navbar-expand-lg bg-success shadow sticky-top">
+<nav class="navbar navbar-expand-lg bg-primary shadow sticky-top">
   <div class="container">
     <div style="position: relative">
-      <span class="navbar-brand fs-2 text-light fw-bold m-0">CITY TOURS</span>
-      <span class="navbar-brand text-light fs-6">usuarios</span>
+      <a class="nav-link" href="/users">
+        <span class="navbar-brand fs-3 m-0 text-light fw-bold">CITY TOURS</span>
+        <span class="navbar-brand text-light fs-6">usuarios</span>
+      </a>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUser" 
+            aria-controls="navbarUser" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="navbarUser">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item me-3">
+          <a class="nav-link active text-light fs-5" href="{{ url('/home') }}">Inicio</a>
+        </li>
         <li class="nav-item">
-          <a class="nav-link active text-light" href="{{ url('/') }}">Cerrar Sesión</a>
+          <form action="logout" method="POST">
+            @csrf
+            <a href="#" onclick="this.closest('form').submit()" class="nav-link active text-light fs-5">
+            Cerrar sesión</a>
+          </form>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
-
-
-
-
-
-
-
