@@ -4,160 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paquetes Turísticos Perú</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-primary shadow sticky-top">
         <div class="container">
-            <span class="navbar-brand fs-3 text-light fw-bold">CITY TOURS</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link" href="/home">
+                <span class="navbar-brand fs-3 text-light fw-bold">CITY TOURS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHome" 
+                    aria-controls="navbarHome" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> 
+                    <li class="nav-item me-3"> 
                         <a class="nav-link active text-light fs-5" href="{{ url('/users') }}">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light fs-5" href="{{ url('') }}">Cerrar sesión</a>
+                        <form action="logout" method="POST">
+                            @csrf
+                            <a href="#" onclick="this.closest('form').submit()" class="nav-link active text-light fs-5">
+                            Cerrar sesión</a>
+                        </form>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <h1 class="text-center my-4 display-5 fw-semibold">Explora los destinos más populares del Perú</h1>
-        
-        <div class="row mb-4">
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/machupicchu.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Machu Picchu">
-                    <div class="card-body">
-                        <h5 class="card-title">Machu Picchu</h5>
-                        <p class="card-text">Una antigua ciudadela inca situada en las montañas de los Andes, conocida por su impresionante arquitectura y paisajes naturales.</p>
-                        <p><strong>Días:</strong> 4 | <strong>Noches:</strong> 3</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 2,000</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
+        <h1 class="text-center my-4 display-6 fw-semibold">Explora los destinos más populares del Perú</h1>
+
+        <div class="row">
+            @php
+            $destinos = [
+                ['img' => 'machupicchu.jpg', 'alt' => 'Machu Picchu', 'titulo' => 'Machu Picchu', 'desc' => 'Una antigua ciudadela inca situada en las montañas de los Andes, conocida por su impresionante arquitectura y paisajes naturales.', 'dias' => 4, 'noches' => 3, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 2000],
+                ['img' => 'paracas.jpg', 'alt' => 'Paracas', 'titulo' => 'Paracas', 'desc' => 'Conocida por su Reserva Nacional y la riqueza de su fauna marina, es un destino ideal para amantes de la naturaleza.', 'dias' => 2, 'noches' => 1, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1000],
+                ['img' => 'lineasdenazca.png', 'alt' => 'Líneas de Nazca', 'titulo' => 'Líneas de Nazca', 'desc' => 'Misteriosas figuras geoglíficas en el desierto, que incluyen líneas rectas, figuras de animales y formas geométricas.', 'dias' => 2, 'noches' => 1, 'paquete' => 'Vuelo + Asistencia', 'precio' => 800],
+                ['img' => 'iquitos.jpg', 'alt' => 'Iquitos', 'titulo' => 'Iquitos', 'desc' => 'La ciudad más grande de la selva amazónica peruana, conocida por su cultura amazónica y sus ríos.', 'dias' => 4, 'noches' => 3, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1700],
+                ['img' => 'lagotiticaca.webp', 'alt' => 'Lago Titicaca', 'titulo' => 'Lago Titicaca', 'desc' => 'El lago navegable más alto del mundo, conocido por sus islas flotantes y hermosos paisajes.', 'dias' => 3, 'noches' => 2, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1200],
+                ['img' => 'vallesagrado.jpg', 'alt' => 'Valle Sagrado', 'titulo' => 'Valle Sagrado', 'desc' => 'Un hermoso valle andino con ruinas incas, campos de cultivo y pequeñas comunidades tradicionales.', 'dias' => 3, 'noches' => 2, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1400],
+                ['img' => 'cusco.jpg', 'alt' => 'Cusco', 'titulo' => 'Cusco', 'desc' => 'La antigua capital del imperio inca, con una rica historia y sitios arqueológicos fascinantes.', 'dias' => 3, 'noches' => 2, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1500],
+                ['img' => 'trujillo.jpg', 'alt' => 'Trujillo', 'titulo' => 'Trujillo', 'desc' => 'Conocida como la "Ciudad de la Eterna Primavera", famosa por sus sitios arqueológicos preincaicos y festivales culturales.', 'dias' => 3, 'noches' => 2, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1200],
+                ['img' => 'arequipa.jpg', 'alt' => 'Arequipa', 'titulo' => 'Arequipa', 'desc' => 'Conocida como la "Ciudad Blanca" por sus edificios coloniales construidos con sillar blanco. Rodeada de volcanes imponentes.', 'dias' => 3, 'noches' => 2, 'paquete' => 'Hotel + Vuelo + Asistencia', 'precio' => 1300],
+            ];
+            @endphp
+
+            @foreach($destinos as $destino)
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ asset('assets/' . $destino['img']) }}" class="img-thumbnail" style="height: 6.7cm" alt="{{ $destino['alt'] }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold">{{ $destino['titulo'] }}</h5>
+                        <p class="card-text">{{ $destino['desc'] }}</p>
+                        <p><strong>Días:</strong> {{ $destino['dias'] }} | <strong>Noches:</strong> {{ $destino['noches'] }}</p>
+                        <p><strong>Paquete:</strong> {{ $destino['paquete'] }}</p>
+                        <p><strong>Precio por persona:</strong> S/. {{ number_format($destino['precio'], 0) }}</p>
+                        <a href="" class="btn btn-primary mt-auto">Reservar</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/paracas.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Paracas">
-                    <div class="card-body">
-                        <h5 class="card-title">Paracas</h5>
-                        <p class="card-text">Conocida por su Reserva Nacional y la riqueza de su fauna marina, es un destino ideal para amantes de la naturaleza.</p>
-                        <p><strong>Días:</strong> 2 | <strong>Noches:</strong> 1</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,000</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('assets/lineasdenazca.png')}}" class="img-thumbnail" style="height: 6.7cm" alt="Líneas de Nazca">
-                    <div class="card-body">
-                        <h5 class="card-title">Líneas de Nazca</h5>
-                        <p class="card-text">Misteriosas figuras geoglíficas en el desierto, que incluyen líneas rectas, figuras de animales y formas geométricas.</p>
-                        <p><strong>Días:</strong> 2 | <strong>Noches:</strong> 1</p>
-                        <p><strong>Paquete:</strong> Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 800</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mb-4">
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/iquitos.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Iquitos">
-                    <div class="card-body">
-                        <h5 class="card-title">Iquitos</h5>
-                        <p class="card-text">La ciudad más grande de la selva amazónica peruana, conocida por su cultura amazónica y sus ríos.</p>
-                        <p><strong>Días:</strong> 4 | <strong>Noches:</strong> 3</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,700</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/lagotiticaca.webp')}}" class="img-thumbnail" style="height: 6.7cm" alt="Lago Titicaca">
-                    <div class="card-body">
-                        <h5 class="card-title">Lago Titicaca</h5>
-                        <p class="card-text">El lago navegable más alto del mundo, conocido por sus islas flotantes y hermosos paisajes.</p>
-                        <p><strong>Días:</strong> 3 | <strong>Noches:</strong> 2</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,200</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('assets/vallesagrado.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Valle Sagrado">
-                    <div class="card-body">
-                        <h5 class="card-title">Valle Sagrado</h5>
-                        <p class="card-text">Un hermoso valle andino con ruinas incas, campos de cultivo y pequeñas comunidades tradicionales.</p>
-                        <p><strong>Días:</strong> 3 | <strong>Noches:</strong> 2</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,400</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mb-4">
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/cusco.jpg')}}" class="img-thumbnail" style="height: 6.8cm" alt="Cusco">
-                    <div class="card-body">
-                        <h5 class="card-title">Cusco</h5>
-                        <p class="card-text">La antigua capital del imperio inca, con una rica historia y sitios arqueológicos fascinantes.</p>
-                        <p><strong>Días:</strong> 3 | <strong>Noches:</strong> 2</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,500</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 pb-4 pb-md-0">
-                <div class="card">
-                    <img src="{{ asset('assets/trujillo.jpg')}}" class="img-thumbnail" style="height: 6.8cm" alt="Trujillo">
-                    <div class="card-body">
-                        <h5 class="card-title">Trujillo</h5>
-                        <p class="card-text">Conocida como la "Ciudad de la Eterna Primavera", famosa por sus sitios arqueológicos preincaicos y festivales culturales.</p>
-                        <p><strong>Días:</strong> 3 | <strong>Noches:</strong> 2</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,200</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('assets/arequipa.jpg')}}" class="img-thumbnail" style="height: 6.7cm" alt="Arequipa">
-                    <div class="card-body">
-                        <h5 class="card-title">Arequipa</h5>
-                        <p class="card-text">Conocida como la "Ciudad Blanca" por sus edificios coloniales construidos con sillar blanco. Rodeada de volcanes imponentes.</p>
-                        <p><strong>Días:</strong> 3 | <strong>Noches:</strong> 2</p>
-                        <p><strong>Paquete:</strong> Hotel + Vuelo + Asistencia</p>
-                        <p><strong>Precio por persona:</strong> S/. 1,300</p>
-                        <a href="" class="btn btn-primary">Reservar</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
 </html>
