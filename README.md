@@ -1,10 +1,16 @@
-# City Tours
-Sistema de gestión turística que permite el registro de usuarios, inicio de sesión y la venta de paquetes turísticos.
+# ✈️ City Tours
+Sistema de gestión turística que permite el registro e inicio de sesión de usuarios, visualización de paquetes turísticos y una sección para crear, editar y eliminar usuarios registrados.
 
-![citytours_github](https://github.com/user-attachments/assets/4097e117-0434-499d-85a7-ad5fbd56a187)
+![citytours_github](https://github.com/user-attachments/assets/32f6f527-72ba-4d32-968f-8ad54ae39a16)
 
-## Instalación y Configuración
+## 🛠️ Tecnologías
+- ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+- ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+- ![XAMPP](https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white)
+- ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+- ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
+## ⚙️ Instalación y Configuración
 #### 1. Clona el repositorio
     git clone https://github.com/alonsoramoss/citytours.git
 
