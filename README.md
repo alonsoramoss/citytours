@@ -1,5 +1,5 @@
 # ✈️ City Tours
-Sistema de gestión turística que permite el registro e inicio de sesión de usuarios, visualización de paquetes turísticos y una sección para crear, editar y eliminar usuarios registrados.
+Sistema de gestión turística que permite el registro e inicio de sesión, exploración de paquetes turísticos y gestión de usuarios registrados.
 
 ![citytours_github](https://github.com/user-attachments/assets/32f6f527-72ba-4d32-968f-8ad54ae39a16)
 
