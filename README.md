@@ -2,7 +2,7 @@
 
 Sistema de gestión turística que permite a los usuarios registrarse, iniciar sesión, explorar paquetes turísticos y administrar usuarios.
 
-![citytours_github](https://github.com/user-attachments/assets/32f6f527-72ba-4d32-968f-8ad54ae39a16)
+![citytours](https://github.com/user-attachments/assets/32f6f527-72ba-4d32-968f-8ad54ae39a16)
 
 ## 🛠️ Tecnologías
 
